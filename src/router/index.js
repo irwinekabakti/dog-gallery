@@ -22,7 +22,7 @@ const routes = [
       },
       {
         path: "/detail/:breed",
-        name: "about",
+        name: "detail",
         component: DetailView,
       },
     ],

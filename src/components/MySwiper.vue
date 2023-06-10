@@ -1,12 +1,3 @@
-<script setup>
-  import { Pagination } from "swiper";
-  import { Swiper, SwiperSlide } from "swiper/vue";
-  import "swiper/css";
-  import "swiper/css/pagination";
-
-  const modules = [Pagination];
-</script>
-
 <template>
   <swiper
     :modules="modules"
@@ -31,13 +22,20 @@
   </swiper>
 </template>
 
+<script setup>
+  import { Pagination } from "swiper";
+  import { Swiper, SwiperSlide } from "swiper/vue";
+  import "swiper/css";
+  import "swiper/css/pagination";
+
+  const modules = [Pagination];
+</script>
+
 <style>
   .swiper-pagination-bullet {
     @apply w-3 h-3 bg-[#d97759] opacity-100;
-    /* margin-top: 10px; */
   }
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply rounded-xl w-6  bg-secondary;
-    /* margin-top: 10px; */
   }
 </style>

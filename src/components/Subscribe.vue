@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative my-32 bg-gradient-to-b from-primary-200/30 to-primary-100/10 pb-10 md:pb-32 rounded-lg -mx-5">
+    class="relative my-18 md:my-32 bg-gradient-to-b from-primary-200/30 to-primary-100/10 pb-10 md:pb-32 rounded-lg -mx-5">
     <div class="p-10">
       <div class="flex items-center justify-between">
         <div>
@@ -16,19 +16,6 @@
           <img src="../assets/icon/dog-walking.png" alt="" />
         </div>
       </div>
-      <!-- <form action="#" class="mt-14 w-full">
-        <div class="h-16 md:h-20 w-full md:w-1/2 flex items-center">
-          <input
-            class="h-full flex-grow rounded-l-lg px-3 md:px-6 text-sm md:text-lg"
-            type="text"
-            placeholder="Enter your email address" />
-          <button
-            class="h-full px-3 lg:px-6 text-sm md:text-base text-black font-bold bg-secondary rounded-r-lg">
-            SUBSCRIBE
-          </button>
-        </div>
-      </form> -->
-
       <button
         class="px-4 py-2 mt-3 text-sm rounded-full text-black font-medium uppercase bg-secondary">
         Let's go !
@@ -39,3 +26,7 @@
     </div>
   </div>
 </template>
+
+<script setup></script>
+
+<style scoped></style>

@@ -17,6 +17,7 @@
         </div>
       </div>
       <button
+        @click="toSearchDog()"
         class="px-4 py-2 mt-3 text-sm rounded-full text-black font-medium uppercase bg-secondary">
         Let's go !
       </button>
@@ -27,6 +28,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  import { useRouter } from "vue-router";
+
+  const router = useRouter();
+
+  const toSearchDog = () => {
+    router.push({ name: "searchDog" });
+  };
+</script>
 
 <style scoped></style>

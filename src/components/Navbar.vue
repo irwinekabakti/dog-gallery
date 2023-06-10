@@ -4,12 +4,13 @@
     class="fixed top-0 left-0 w-full bg-[#631307] z-20 transition duration-200">
     <div class="container flex items-center justify-between h-20">
       <div class="relative z-30 flex items-center gap-2 mb-2 lg:mb-0">
-        <h1 class="text-black font-bold text-lg lg:text-2xl">
+        <h1 class="text-black font-bold text-lg lg:text-2xl" @click="toHome()">
           Sea<span class="text-secondary">rch</span> dog
         </h1>
       </div>
       <div class="flex lg:hidden items-center gap-2">
         <button
+          @click="toSearchDog()"
           class="relative z-30 px-4 py-2 -mt-1.5 text-sm rounded-full text-black font-medium tracking-wider uppercase bg-secondary w-full lg:w-auto">
           Pick My Pets !
         </button>
@@ -31,22 +32,26 @@
       <div
         class="absolute lg:static top-20 inset-x-0 flex flex-col lg:flex-row items-center gap-5 lg:gap-10 bg-[#63130785] lg:bg-transparent pt-5 pb-10 px-5 lg:p-0 transition duration-500 lg:duration-200 lg:-translate-y-0"
         :class="!showMenu ? 'translate-y-[-150%]' : '-translate-y-0'">
-        <a @click="showMenu = false" class="text-black font-medium" href="#home"
+        <a
+          @click="showMenu = false"
+          class="text-black font-medium hover:text-slate-800"
+          href="/"
           >Home</a
         >
         <a
           @click="showMenu = false"
-          class="text-black font-medium"
-          href="#category"
+          class="text-black font-medium hover:text-slate-800"
+          href="#contact"
           >Contact</a
         >
         <a
           @click="showMenu = false"
-          class="text-black font-medium"
+          class="text-black font-medium hover:text-slate-800"
           href="#about"
           >About</a
         >
         <button
+          @click="toSearchDog()"
           class="hidden md:block px-8 py-3 rounded-full text-black font-medium tracking-wider uppercase bg-secondary w-full lg:w-auto">
           Pick My Pets !
         </button>
@@ -57,9 +62,20 @@
 
 <script setup>
   import { onMounted, ref } from "vue";
+  import { useRouter } from "vue-router";
 
   const navbar = ref("");
   const showMenu = ref(false);
+
+  const router = useRouter();
+
+  const toSearchDog = () => {
+    router.push("/searchDog");
+  };
+
+  const toHome = () => {
+    router.push("/");
+  };
 
   onMounted(() => {
     window.onscroll = () => {
@@ -72,4 +88,8 @@
   });
 </script>
 
-<style scoped></style>
+<style scoped>
+  h1 {
+    cursor: pointer;
+  }
+</style>

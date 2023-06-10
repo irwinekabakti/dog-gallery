@@ -1,6 +1,14 @@
-import './assets/main.css'
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./assets/main.css";
+import router from "./router";
+import store from "./store";
+import VueLazyload from "vue-lazyload";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+const app = createApp(App);
 
-createApp(App).mount('#app')
+app.use(router);
+app.use(store);
+app.use(VueLazyload);
+
+app.mount("#app");

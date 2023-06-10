@@ -21,7 +21,7 @@ const routes = [
         component: SearchView,
       },
       {
-        path: "/about",
+        path: "/about/:breed",
         name: "about",
         component: AboutView,
       },

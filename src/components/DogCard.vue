@@ -46,7 +46,7 @@
   });
 
   const gotoDogDetails = () => {
-    router.push(`about/${breed.value}`);
+    router.push(`/detail/${breed.value}`);
   };
 
   const breed = computed(() => props.url.split("/")[4]?.split("-")[0]);

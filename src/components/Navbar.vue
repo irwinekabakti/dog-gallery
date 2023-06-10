@@ -32,18 +32,24 @@
       <div
         class="absolute lg:static top-20 inset-x-0 flex flex-col lg:flex-row items-center gap-5 lg:gap-10 bg-[#63130785] lg:bg-transparent pt-5 pb-10 px-5 lg:p-0 transition duration-500 lg:duration-200 lg:-translate-y-0"
         :class="!showMenu ? 'translate-y-[-150%]' : '-translate-y-0'">
+        <RouterLink
+          @click="showMenu = false"
+          class="text-black font-medium hover:text-slate-800"
+          :to="{ path: '/' }"
+          >Home
+        </RouterLink>
         <a
           @click="showMenu = false"
           class="text-black font-medium hover:text-slate-800"
-          href="/"
-          >Home</a
-        >
-        <a
-          @click="showMenu = false"
-          class="text-black font-medium hover:text-slate-800"
-          href="#contact"
+          href="https://www.linkedin.com/in/irwin-e-a69475247/"
+          target="_blank"
           >Contact</a
         >
+        <!-- <RouterLink
+          @click="showMenu = false"
+          class="text-black font-medium hover:text-slate-800"
+          :to="{ path: 'https://www.linkedin.com/in/irwin-e-a69475247/' }">
+        </RouterLink> -->
         <a
           @click="showMenu = false"
           class="text-black font-medium hover:text-slate-800"
@@ -62,7 +68,7 @@
 
 <script setup>
   import { onMounted, ref } from "vue";
-  import { useRouter } from "vue-router";
+  import { useRouter, RouterLink } from "vue-router";
 
   const navbar = ref("");
   const showMenu = ref(false);

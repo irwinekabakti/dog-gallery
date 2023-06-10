@@ -3,7 +3,7 @@ import RootLayout from "./RootLayout/RootLayout.vue";
 
 const HomeView = () => import("../views/HomeView.vue");
 const SearchView = () => import("../views/SearchView.vue");
-const AboutView = () => import("../views/AboutView.vue");
+const DetailView = () => import("../views/DetailView.vue");
 
 const routes = [
   {
@@ -21,9 +21,9 @@ const routes = [
         component: SearchView,
       },
       {
-        path: "/about/:breed",
+        path: "/detail/:breed",
         name: "about",
-        component: AboutView,
+        component: DetailView,
       },
     ],
   },

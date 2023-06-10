@@ -1,8 +1,8 @@
 <template>
-  <main class="w-[80%] mx-auto md:w-full mb-20 mt-[67px] lg:max-w-7xl">
-    <section
+  <section class="w-[80%] mx-auto md:w-full mb-20 mt-[67px] lg:max-w-7xl">
+    <div
       class="flex flex-col m-auto mb-6 md:mb-16 md:grid md:grid-cols-2 gap-7 w-fit">
-      <div class="w-full md:w-[400px] md:h-[300px]">
+      <div class="w-full md:w-[400px] md:h-[300px] mt-12 md:mt-24">
         <img
           class="object-cover rounded-2xl w-full h-full border-2 border-[#631307] cursor-pointers"
           alt="Dog image"
@@ -10,9 +10,9 @@
           height="174"
           :src="imageSrc" />
       </div>
-      <div class="flex flex-col justify-between">
+      <div class="flex flex-col justify-between mt-12 md:mt-24">
         <h2
-          class="col-span-2 mt-0 mb-5 md:mb-0 md:mt-4 text-3xl md:text-[48px] font-bold capitalize font-unbounded">
+          class="col-span-2 mt-8 mb-5 md:mb-0 md:mt-4 text-3xl md:text-[48px] font-bold capitalize font-unbounded">
           {{ name }}
         </h2>
         <div class="grid grid-cols-2 gap-[10px] w-full md:w-fit h-fit">
@@ -36,9 +36,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <hr />
-    <section
+    <div
       class="grid grid-cols-2 gap-8 mt-6 md:flex md:justify-between animate-slide-in">
       <div class="grid gap-3" v-for="(rating, key) in ratings" :key="key">
         <span class="font-medium text-base md:text-lg text-[#393939]">{{
@@ -46,8 +46,8 @@
         }}</span>
         <Stars :score="rating.value" />
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </template>
 
 <script setup>

@@ -1,7 +1,7 @@
 <template>
   <section
     id="home"
-    class="grid place-items-center mt-20 md:mt-10 overflow-hidden">
+    class="grid place-items-center mt-20 md:mt-20 xl:mt-10 overflow-hidden">
     <div
       class="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-2 items-end gap-10 lg:gap-16 w-full px-0 lg:px-10">
       <div

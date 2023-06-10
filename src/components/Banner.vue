@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative my-18 md:my-32 bg-gradient-to-b from-primary-200/30 to-primary-100/10 pb-10 md:pb-32 rounded-lg -mx-5">
+    class="relative my-18 md:my-32 xl:my-36 2xl:my-48 bg-gradient-to-b from-primary-200/30 to-primary-100/10 pb-10 md:pb-32 rounded-lg -mx-5">
     <div class="p-10">
       <div class="flex items-center justify-between">
         <div>
@@ -13,7 +13,7 @@
           </p>
         </div>
         <div class="w-36 block md:hidden">
-          <img src="../assets/images/dog-walking.png" alt="" />
+          <img :src="dogWalking" alt="" />
         </div>
       </div>
       <button

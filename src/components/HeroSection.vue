@@ -1,7 +1,7 @@
 <template>
-  <section class="relative flex flex-col items-center mb-28">
+  <div class="relative flex flex-col items-center mb-28">
     <h1
-      class="font-unbounded text-[#631307] text-3xl md:text-5xl md:w-[544px] w-[311px] text-center mb-2 md:mb-5 relative animate-slide-in -translate-y-10">
+      class="font-unbounded text-[#631307] text-3xl md:text-5xl md:w-[544px] w-[311px] text-center mb-2 md:mb-5 relative animate-slide-in -translate-y-10 mt-12">
       Find your next best friend
     </h1>
     <p
@@ -31,7 +31,7 @@
         <ArrowRightIcon />
       </i>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

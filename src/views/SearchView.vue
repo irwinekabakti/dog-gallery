@@ -1,59 +1,5 @@
-<script setup>
-  import HeroSection from "../components/HeroSection.vue";
-  import TabNav from "../components/TabNav.vue";
-  import DogCard from "../components/DogCard.vue";
-  import { onMounted, computed, ref } from "vue";
-  import { useStore } from "vuex";
-  import CircleArrowDownIcon from "../components/icons/CircleArrowDownIcon.vue";
-  import CircleArrowUpIcon from "../components/icons/CircleArrowUpIcon.vue";
-
-  const store = useStore();
-
-  const searchTerm = ref("");
-
-  const loading = ref(false);
-
-  const dogs = computed(() => {
-    if (searchTerm.value === "") {
-      return store.getters.dogs;
-    } else {
-      return store.getters.selectedBreed;
-    }
-  });
-
-  onMounted(async () => {
-    loading.value = true;
-    await store.dispatch("fetchDogs");
-    await store.dispatch("fetchDogs");
-    loading.value = false;
-  });
-
-  const handleSearch = async (term) => {
-    loading.value = true;
-    if (term) {
-      await store.dispatch("fetchBreed", term);
-    }
-    searchTerm.value = term;
-    loading.value = false;
-  };
-
-  const gotoTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const handleShowMore = async () => {
-    loading.value = true;
-    await store.dispatch("fetchDogs");
-    await store.dispatch("fetchDogs");
-    loading.value = false;
-  };
-</script>
-
 <template>
-  <main class="w-[80%] mx-auto mb-20 lg:max-w-7xl mt-[67px]">
+  <section class="w-[80%] mx-auto mb-20 lg:max-w-7xl mt-[67px]">
     <HeroSection @search="handleSearch" />
     <TabNav />
     <div
@@ -99,9 +45,64 @@
         <img
           class="w-20 h-10 rounded-2xl object-cover"
           alt="Running dog"
-          src="@/assets/images/running-dog.gif" />
+          :src="loadingImg" />
         <span class="text-[#631307] font-medium">Loading...</span>
       </div>
     </div>
-  </main>
+  </section>
 </template>
+
+<script setup>
+  import HeroSection from "../components/HeroSection.vue";
+  import TabNav from "../components/TabNav.vue";
+  import DogCard from "../components/DogCard.vue";
+  import { onMounted, computed, ref } from "vue";
+  import { useStore } from "vuex";
+  import CircleArrowDownIcon from "../components/icons/CircleArrowDownIcon.vue";
+  import CircleArrowUpIcon from "../components/icons/CircleArrowUpIcon.vue";
+  import loadingImg from "../assets/images/running-dog.gif";
+
+  const store = useStore();
+
+  const searchTerm = ref("");
+
+  const loading = ref(false);
+
+  const dogs = computed(() => {
+    if (searchTerm.value === "") {
+      return store.getters.dogs;
+    } else {
+      return store.getters.selectedBreed;
+    }
+  });
+
+  onMounted(async () => {
+    loading.value = true;
+    await store.dispatch("fetchDogs");
+    await store.dispatch("fetchDogs");
+    loading.value = false;
+  });
+
+  const handleSearch = async (term) => {
+    loading.value = true;
+    if (term) {
+      await store.dispatch("fetchBreed", term);
+    }
+    searchTerm.value = term;
+    loading.value = false;
+  };
+
+  const gotoTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleShowMore = async () => {
+    loading.value = true;
+    await store.dispatch("fetchDogs");
+    await store.dispatch("fetchDogs");
+    loading.value = false;
+  };
+</script>

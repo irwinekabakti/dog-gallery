@@ -1,13 +1,13 @@
 <template>
   <div>
     <Home />
-    <Subscribe />
+    <Banner />
   </div>
 </template>
 
 <script setup>
   import Home from "../components/Home.vue";
-  import Subscribe from "../components/Subscribe.vue";
+  import Banner from "../components/Banner.vue";
 </script>
 
 <style scoped></style>

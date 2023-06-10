@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-
 import RootLayout from "./RootLayout/RootLayout.vue";
-const Home = () => import("../views/HomeView.vue");
-const Detail = () => "../views/DetailView.vue";
+
+const HomeView = () => import("../views/HomeView.vue");
+const SearchView = () => import("../views/SearchView.vue");
 
 const routes = [
   {
@@ -12,12 +12,12 @@ const routes = [
       {
         path: "/",
         name: "home",
-        component: Home,
+        component: HomeView,
       },
       {
-        path: "/detail",
-        name: "detail",
-        component: Detail,
+        path: "/searchDog",
+        name: "searchDog",
+        component: SearchView,
       },
     ],
   },

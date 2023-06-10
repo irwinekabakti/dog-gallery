@@ -13,7 +13,7 @@
           </p>
         </div>
         <div class="w-36 block md:hidden">
-          <img src="../assets/icon/dog-walking.png" alt="" />
+          <img src="../assets/images/dog-walking.png" alt="" />
         </div>
       </div>
       <button
@@ -23,13 +23,14 @@
       </button>
     </div>
     <div class="absolute right-10 bottom-10 w-1/3 hidden md:block">
-      <img src="../assets/icon/dog-walking.png" alt="" />
+      <img :src="dogWalking" alt="" />
     </div>
   </div>
 </template>
 
 <script setup>
   import { useRouter } from "vue-router";
+  import dogWalking from "../assets/images/dog-walking.png";
 
   const router = useRouter();
 

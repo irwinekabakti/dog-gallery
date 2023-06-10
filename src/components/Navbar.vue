@@ -47,7 +47,7 @@
         <a
           @click="showMenu = false"
           class="text-black font-medium hover:text-slate-800"
-          href="#about"
+          href="/"
           >About</a
         >
         <button

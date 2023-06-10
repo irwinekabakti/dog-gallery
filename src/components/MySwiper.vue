@@ -5,19 +5,19 @@
     :pagination="{ clickable: true }"
     class="pb-8">
     <swiper-slide class="grid place-items-center">
-      <img src="../assets/icon/corgi.png" class="w-2/3 lg:w-[70%] mt-12" />
+      <img :src="imgSlide1" class="w-2/3 lg:w-[70%] mt-12" />
     </swiper-slide>
     <swiper-slide class="grid place-items-center mt-8">
-      <img src="../assets/icon/dog-3.png" class="w-2/3 lg:w-[70%] mt-12" />
+      <img :src="imgSlide2" class="w-2/3 lg:w-[70%] mt-12" />
     </swiper-slide>
     <swiper-slide class="grid place-items-center mt-3">
-      <img src="../assets/icon/dog-5.png" class="w-2/3 lg:w-[70%] mt-12" />
+      <img :src="imgSlide3" class="w-2/3 lg:w-[70%] mt-12" />
     </swiper-slide>
     <swiper-slide class="grid place-items-center mt-2">
-      <img src="../assets/icon/dog-9.png" class="w-2/3 lg:w-[70%] mt-12" />
+      <img :src="imgSlide4" class="w-2/3 lg:w-[70%] mt-12" />
     </swiper-slide>
     <swiper-slide class="grid place-items-center h-60 mt-3">
-      <img src="../assets/icon/dog-10.png" class="w-2/3 lg:w-[70%] mt-12" />
+      <img :src="imgSlide5" class="w-2/3 lg:w-[70%] mt-12" />
     </swiper-slide>
   </swiper>
 </template>
@@ -27,6 +27,11 @@
   import { Swiper, SwiperSlide } from "swiper/vue";
   import "swiper/css";
   import "swiper/css/pagination";
+  import imgSlide1 from "../assets/images/corgi.png";
+  import imgSlide2 from "../assets/images/dog-3.png";
+  import imgSlide3 from "../assets/images/dog-5.png";
+  import imgSlide4 from "../assets/images/dog-9.png";
+  import imgSlide5 from "../assets/images/dog-10.png";
 
   const modules = [Pagination];
 </script>

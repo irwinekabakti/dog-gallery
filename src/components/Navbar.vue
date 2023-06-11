@@ -38,24 +38,17 @@
           :to="{ path: '/' }"
           >Home
         </RouterLink>
-        <a
+        <RouterLink
           @click="showMenu = false"
           class="text-black font-medium hover:text-slate-800"
-          href="https://www.linkedin.com/in/irwin-e-a69475247/"
-          target="_blank"
-          >Contact</a
-        >
-        <!-- <RouterLink
+          :to="{ name: 'home' }">
+        </RouterLink>
+        <RouterLink
           @click="showMenu = false"
           class="text-black font-medium hover:text-slate-800"
-          :to="{ path: 'https://www.linkedin.com/in/irwin-e-a69475247/' }">
-        </RouterLink> -->
-        <a
-          @click="showMenu = false"
-          class="text-black font-medium hover:text-slate-800"
-          href="/"
-          >About</a
-        >
+          :to="{ name: 'home' }">
+        </RouterLink>
+
         <button
           @click="toSearchDog()"
           class="hidden md:block px-8 py-3 rounded-full text-black font-medium tracking-wider uppercase bg-secondary w-full lg:w-auto">
